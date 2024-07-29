@@ -1,3 +1,4 @@
+# import azure libs to store credentials and manage VM
 from azure.identity import ClientSecretCredential
 from azure.mgmt.compute import ComputeManagementClient
 # import os for environment variables
