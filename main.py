@@ -3,7 +3,7 @@ from azure.identity import ClientSecretCredential
 from azure.mgmt.compute import ComputeManagementClient
 # import os for environment variables
 import os
-from dotenv import load_dotenv, dotenv_values
+from dotenv import load_dotenv
 
 # load variables from .env file
 load_dotenv()
