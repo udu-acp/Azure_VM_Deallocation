@@ -8,17 +8,17 @@ from dotenv import load_dotenv, dotenv_values
 load_dotenv()
 
 # Azure subscription ID
-subscription_id = os.getenv("ESL_LINUX_SUBSCRIPTION_ID")
+subscription_id = os.getenv("SUBSCRIPTION_ID")
 
 # Resource group name and VM name
-resource_group_name = os.getenv("ESL_RESOURCE_GROUP")
-vm_name = os.getenv("ESL_VM_NAME")
+resource_group_name = os.getenv("RESOURCE_GROUP")
+vm_name = os.getenv("VM_NAME")
 
 # Initialize Azure credentials
 credential = ClientSecretCredential(
-    tenant_id=os.getenv('AZURE_TENANT_ID'),
-    client_id=os.getenv('AZURE_CLIENT_ID'),
-    client_secret=os.getenv('AZURE_CLIENT_SECRET')
+    tenant_id=os.getenv('AZURE_APP_TENANT_ID'),
+    client_id=os.getenv('AZURE_APP_CLIENT_ID'),
+    client_secret=os.getenv('AZURE_APP_CLIENT_SECRET')
 )
 
 
