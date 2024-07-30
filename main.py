@@ -27,7 +27,10 @@ credential = ClientSecretCredential(
 compute_client = ComputeManagementClient(credential, subscription_id)
 
 # Stop the VM
-async_vm_stop = compute_client.virtual_machines.begin_deallocate(resource_group_name, vm_name)
-async_vm_stop.wait()
+vm_stop = compute_client.virtual_machines.begin_deallocate(resource_group_name, vm_name)
+vm_stop
+
+## If you have a child process, you can use the wait function
+# vm_stop.wait()
 
 print(f"The VM {vm_name} has been stopped.")
